@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Example') {
       steps {
-        echo 'Using Cross Team Collaboration '
+        echo 'sending helloWorld'
+        publishEvent generic('helloWorld')
       }
     }
   }
