@@ -4,7 +4,7 @@ pipeline {
     stage('Example') {
       steps {
         echo 'sending helloWorld'
-        publishEvent generic('helloWorld')
+        publishEvent jsonEvent('{"eventName":"helloWorld"}')
       }
     }
   }
