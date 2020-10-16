@@ -9,7 +9,7 @@ pipeline {
     }
     stage('OWASP Dependency Track') {
       steps {
-        dependencyTrackPublisher artifact: 'target/bom.xml', projectName: ${env.JOB_NAME}, synchronous: true, projectVersion: ${env.BRANCH_NAME}
+        dependencyTrackPublisher artifact: 'target/bom.xml', projectName: "${env.JOB_NAME}", synchronous: true, projectVersion: "${env.BRANCH_NAME}"
       }
     }
   }
