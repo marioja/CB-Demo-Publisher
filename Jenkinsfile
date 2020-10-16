@@ -15,5 +15,11 @@ pipeline {
         dependencyTrackPublisher artifact: 'target/bom.xml', projectName: "${env.JOB_NAME}", synchronous: true, projectVersion: "${env.BRANCH_NAME}"
       }
     }
+    stage('Last') {
+      steps {
+        echo 'Done'
+        //publishEvent simpleEvent('helloWorld')
+      }
+    }
   }
 }
